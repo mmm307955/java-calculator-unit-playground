@@ -26,4 +26,16 @@ public class CalculatorTest {
         int result = c.divide(6,3);
         assertEquals(2,result);
     }
+
+    @Test
+    void testCalculateString(){
+        int result = c.calculateString("1,2:3");
+        assertEquals(6,result);
+        result = c.calculateString("");
+        assertEquals(0,result);
+        result = c.calculateString("1,2");
+        assertEquals(3,result);
+        result = c.calculateString("1,2,3");
+        assertEquals(6,result);
+    }
 }
