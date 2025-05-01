@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CalculatorTest {
@@ -9,26 +10,22 @@ public class CalculatorTest {
     @Test
     @DisplayName("덧셈 테스트를 수행한다")
     void testAdd(){
-        int result = c.add(2,3);
-        assertEquals(5,result);
+        assertThat(c.add(2,3)).isEqualTo(5);
     }
     @Test
     @DisplayName("뺄셈 테스트를 수행한다")
     void testSubtract(){
-        int result = c.subtract(2,3);
-        assertEquals(-1,result);
+        assertThat(c.subtract(2,3)).isEqualTo(-1);
     }
 
     @Test
     @DisplayName("곱셈 테스트를 수행한다")
     void testMultiply(){
-        int result = c.multiply(2,3);
-        assertEquals(6,result);
+        assertThat(c.multiply(2, 3)).isEqualTo(6);
     }
     @Test
     @DisplayName("나눗셈 테스트를 수행한다")
     void testDivide(){
-        int result = c.divide(6,3);
-        assertEquals(2,result);
+        assertThat(c.divide(6, 3)).isEqualTo(2);
     }
 }
