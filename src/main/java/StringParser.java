@@ -4,7 +4,7 @@ public class StringParser {
     public static final String DEFAULT_SEPARATOR = "[,:]";
 
     public static String[] parse(String input) {
-        if (input == null | input.isEmpty()) {
+        if (input == null || input.isEmpty()) {
             return new String[0];//입력이 비어있으면 빈 배열을 반환
         }
         String separator = DEFAULT_SEPARATOR;
